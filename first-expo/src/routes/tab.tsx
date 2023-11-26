@@ -4,12 +4,14 @@ import { createBottomTabNavigator, BottomTabNavigationProp } from '@react-naviga
 
 import Home from '../screens/Home';
 import Experiencia from '../screens/Experiencias';
+import Escolaridade from '../screens/Escolaridade';
 
 const Tab = createBottomTabNavigator();
 
 type TabNavigation = {
  Home: undefined;
  Experiencia: undefined;
+ Escolaridade: undefined;
 }
 
 export type TabType = BottomTabNavigationProp<TabNavigation>
@@ -20,6 +22,7 @@ export default function TabComponent() {
         <Tab.Navigator>
             <Tab.Screen name='Home' component={Home}/>
             <Tab.Screen name='Experiencia' component={Experiencia}/>
+            <Tab.Screen name='Escolaridade' component={Escolaridade}/>
         </Tab.Navigator>
     </NavigationContainer>
   );
